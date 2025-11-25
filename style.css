@@ -1,0 +1,159 @@
+/* Styling untuk Body dan Container utama */
+body {
+    background-color: #f7f7f7;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h1 {
+    text-align: center;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+/* Styling untuk Link Tambah Barang */
+p a {
+    color: #28a745;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+/* --- PERBAIKAN FOKUS PADA TABEL (SOLUSI KERAPIAN) --- */
+.main {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse; /* Menghilangkan border ganda */
+    margin-top: 10px;
+}
+
+th, td {
+    padding: 12px 10px;
+    text-align: left;
+    border: 1px solid #ddd; /* Menggunakan garis border penuh di sekeliling sel */
+    /* KUNCI: Membuat konten sejajar di tengah (Gambar dan Teks) */
+    vertical-align: middle; 
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+    /* Mencegah Judul Kolom (HEADER) terpotong/wrapping */
+    white-space: nowrap; 
+    border-color: #007bff; /* Garis header menyesuaikan warna latar */
+}
+
+/* Memberi ruang minimal pada kolom data */
+table td:nth-child(2) { /* Kolom Nama Barang */
+    min-width: 150px; 
+}
+table td:nth-child(7) { /* Kolom Aksi */
+    min-width: 100px; 
+    white-space: nowrap;
+}
+
+/* Warna latar belakang selang-seling */
+tr:nth-child(even) {
+    background-color: #f9f9f9; 
+}
+
+tr:hover {
+    background-color: #e5e5e5;
+}
+
+/* Styling untuk Gambar di Tabel */
+td img {
+    display: block;
+    max-width: 100px; 
+    height: auto;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+/* --- Styling untuk Link Aksi dan Form (TETAP) --- */
+td a {
+    color: #007bff;
+    text-decoration: none;
+    margin-right: 5px;
+}
+td a:hover {
+    text-decoration: underline;
+}
+
+/* Styling Form (untuk tambah.php dan ubah.php) */
+.input { margin-bottom: 15px; }
+.input label { display: block; margin-bottom: 5px; font-weight: bold; }
+.input input[type="text"], 
+.input input[type="file"],
+.input select {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.submit input[type="submit"] {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.submit input[type="submit"]:hover {
+    background-color: #1e7e34;
+}
+
+/* * BAGIAN BARU: Styling untuk Konten Halaman Modular 
+ * (home.php, about.php, kontak.php)
+ */
+
+.content {
+    /* Memberikan ruang di sekitar konten */
+    padding: 20px 30px;
+    
+    /* Memberikan batas agar terlihat seperti kotak konten */
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    background-color: #ffffff; 
+    margin-top: 20px;
+    
+    /* Meningkatkan keterbacaan teks */
+    line-height: 1.6; 
+}
+
+.content h2 {
+    color: #007bff; /* Menggunakan warna biru yang sama dengan h1 */
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.content ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
